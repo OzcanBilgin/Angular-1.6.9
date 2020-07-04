@@ -1,0 +1,18 @@
+ <!-- Data Table -->
+ <table class="table">
+    <thead>
+      <th scope="col">#</th>
+      <th scope="col">name</th>
+      <th scope="col">description</th>
+      <th scope="col">createdAt</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="items in data | filter:q as results track by items.name">
+        <th scope="row"> <a href="#!/forms/{{items.name}}" class="btn btn-primary" type="button" ng-click="ok()">Detail</a></th>
+        <th>{{items.name}}</th>
+        <td>{{items.description}}</td>
+        <td>{{items.createdAt}}</td>
+      </tr>
+    </tbody>
+  </table>

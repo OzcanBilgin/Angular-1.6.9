@@ -1,0 +1,39 @@
+ <form name="form">
+ 
+ <div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Create new form</h3>
+</div>
+<div class="modal-body" id="modal-body">
+   
+        <div class="form-group">
+            <label for="name" class="col-md-4 control-label">Name</label>
+            <div class="col-md-8">
+                <input type="text" ng-model="name" value="" class="form-control"  name="name" ng-model="name" required />
+                <small ng-show="form.name.$touched && form.name.$invalid">The
+                    name is required.</small>
+            </div>
+        </div>
+        <br/><br/>
+        <div class="form-group">
+            <label for="description" class="col-md-4 control-label">Description</label>
+            <div class="col-md-8">
+                <input type="text" ng-model="description" value="" class="form-control"  name="description" ng-model="description" required />
+                <small ng-show="form.description.$touched && form.description.$invalid">The description is required.</small>
+            </div>
+        </div>
+        <br/><br/>
+        <div class="form-group">
+            <label for="date" class="col-md-4 control-label">CreatedAt</label>
+            <div class="col-md-8">
+                <input type="date" ng-model="date" value="" class="form-control"  name="date" ng-model="date" required />
+                <small  ng-show="form.date.$touched && form.date.$invalid">The date is required.</small>
+            </div>
+        </div>
+        <br/><br/>
+
+</div>
+
+<div class="modal-footer">
+    <button ng-disabled="!form.$valid" class="btn btn-primary" type="button" ng-click="ok()">Save</button>
+</div>
+</form>

@@ -1,0 +1,13 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="container">
+    <div class="row">
+    
+        <div class="form-group"  ng-repeat="items in dataByName[0].fields">
+            <label for="name" class="col-md-4 control-label">{{items.name}}</label>
+            <div class="col-md-8">
+                <input type="{{typeInput(items.dataType)}}" ng-model="name" value="" class="form-control"  />
+            </div>
+            <br/>  <br/>
+        </div>
+    </div>
+</div>
